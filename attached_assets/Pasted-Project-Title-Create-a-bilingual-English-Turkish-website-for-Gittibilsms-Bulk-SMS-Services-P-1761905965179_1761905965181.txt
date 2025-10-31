@@ -1,0 +1,214 @@
+Project Title:
+
+Create a bilingual (English + Turkish) website for Gittibilsms – Bulk SMS Services Provider
+
+Prompt Body (copy everything below into Replit)
+
+Goal:
+Build a modern, mobile-responsive, bilingual (TR/EN) website for Gittibilsms, Türkiye’s trusted Bulk SMS service provider.
+
+The site should contain 4 main pages:
+1️⃣ Home
+2️⃣ About
+3️⃣ Blog
+4️⃣ Contact
+
+Brand Colors: Blue (#007BFF), Green (#00C853), Black (#000000).
+
+The website should allow visitors to toggle between English and Turkish languages easily (a “TR | EN” button in the top-right corner).
+
+🌟 GENERAL STYLE & STRUCTURE
+
+Professional, trustworthy tech theme with blue/green gradient accents.
+
+Rounded buttons, modern typography (Poppins / Inter).
+
+Sticky navigation bar: Home | About | Blog | Contact | TR/EN.
+
+Footer with copyright © 2025 Gittibilsms and social/contact links.
+
+Smooth scroll, responsive layout for all screen sizes.
+
+Add SEO-friendly meta tags for both languages.
+
+Include favicon (message or SMS icon).
+
+🇬🇧 ENGLISH VERSION CONTENT
+🏠 HOME PAGE
+
+SEO Keyword: Bulk SMS Services
+
+Hero Section:
+
+Title: “Türkiye’s SMS Powerhouse — Fast, Secure & Affordable Bulk SMS Services”
+
+Subtitle: “Your messages arrive instantly on the platform where speed and reliability meet.”
+
+Buttons: “Get Started” | “Contact Us”
+
+Features Section (use icons):
+
+Fast Shipping — 125 Intel Xeon® servers & 100GbE connections for 500M daily SMS capacity.
+
+256-Bit Encryption — All data stored securely with advanced encryption.
+
+International Connection — Direct global operator links ensure uninterrupted delivery.
+
+High Performance, Affordable Cost — Max efficiency at the best rates.
+
+24/7 Professional Technical Support — Always online expert team.
+
+100% Delivery Guarantee — Optimized multi-server routing for instant SMS delivery.
+
+Pricing Table:
+
+Package	Price	Unit Price
+100K SMS	21,000₺	0.21 Krş
+500K SMS	100,000₺	0.10 Krş
+1M SMS	190,000₺	0.19 Krş
+
+Add CTA button: “Request a Quote” → Contact Page
+
+Why Choose Us:
+Speed, Security, Global Reach, and 24/7 Support — trusted by 1000+ businesses across Türkiye.
+
+👥 ABOUT PAGE
+
+Headline: “About Gittibilsms”
+Intro: “Easy Management, Uninterrupted Communication — With our user-friendly panel, you can manage your customers and communication effortlessly.”
+Body:
+
+High-volume sending, one-click access to millions.
+
+Secure, powerful, easy-to-use infrastructure.
+Mission: “To empower businesses with fast, secure, and affordable Bulk SMS services across Türkiye and worldwide.”
+Contact Info:
+📧 smsgittibil@gmail.com
+
+💬 Telegram: t.me/Gittibilsms
+
+💼 Microsoft Teams: smsgittibil@gmail.com
+
+📝 BLOG PAGE
+
+Title: “Insights & Tips on Bulk SMS Services”
+
+Add 5 blog posts with SEO-friendly titles:
+
+Why Bulk SMS Services Are Essential for Modern Marketing
+
+Top 5 Ways to Improve SMS Delivery Rates
+
+Secure Messaging: How 256-Bit Encryption Protects Your Data
+
+How to Choose the Right Bulk SMS Provider in Türkiye
+
+Boost Your Business Communication with Automated Bulk SMS
+
+Each blog should include:
+
+Featured image
+
+Short intro (1 paragraph)
+
+“Read More” button
+
+📞 CONTACT PAGE
+
+Title: “Get in Touch with Gittibilsms”
+Form fields: Name, Email, Phone, Message, Submit button.
+Display contact info and Telegram link.
+Optional: Add static map of Türkiye background.
+
+🇹🇷 TÜRKÇE VERSİYON (TURKISH VERSION)
+🏠 ANA SAYFA
+
+SEO Anahtar Kelime: Toplu SMS Hizmetleri
+
+Kahraman Bölümü:
+
+Başlık: “Türkiye’nin SMS Gücü — Hızlı, Güvenli ve Uygun Fiyatlı Toplu SMS Hizmetleri”
+
+Alt Başlık: “Hız ve güvenilirliğin buluştuğu platformda mesajlarınız anında ulaşır.”
+
+Düğmeler: “Hemen Başla” | “İletişime Geç”
+
+Öne Çıkan Özellikler:
+
+Hızlı Gönderim: 125 Intel Xeon® sunucu ve 100GbE bağlantı ile günde 500 milyon SMS kapasitesi.
+
+256-Bit Şifreleme: Verileriniz bulutta güvenli bir şekilde saklanır.
+
+Uluslararası Bağlantı: Global operatörlerle doğrudan bağlantılar sayesinde kesintisiz SMS iletimi.
+
+Yüksek Performans, Uygun Maliyet: Profesyonel altyapı, maksimum verimlilik.
+
+7/24 Teknik Destek: Uzman ekibimizle her zaman yanınızdayız.
+
+%100 Teslimat Garantisi: Akıllı platformumuzla mesajlarınız en yüksek hızda iletilir.
+
+Fiyatlandırma Tablosu:
+
+Paket	Fiyat	Birim Fiyat
+100K SMS	21.000₺	0,21 Krş
+500K SMS	100.000₺	0,10 Krş
+1M SMS	190.000₺	0,19 Krş
+
+CTA: “Teklif Al”
+
+Neden Bizi Seçmelisiniz:
+Hız, güvenlik, global erişim ve 7/24 destek — Türkiye genelinde 1000+ işletme tarafından güveniliyor.
+
+👥 HAKKIMIZDA SAYFASI
+
+Başlık: “Gittibilsms Hakkında”
+Giriş: “Kolay Yönetim, Kesintisiz İletişim — Kullanıcı dostu panelimizle müşterilerinize hızlı erişim.”
+Metin:
+
+Yüksek hacimli gönderim, tek panelden kolay yönetim.
+
+Güçlü, güvenli ve sezgisel sistem altyapısı.
+Misyon: “İşletmelere hızlı, güvenli ve ekonomik toplu SMS çözümleri sunmak.”
+İletişim Bilgileri:
+📧 smsgittibil@gmail.com
+
+💬 Telegram: t.me/Gittibilsms
+
+💼 Microsoft Teams: smsgittibil@gmail.com
+
+📝 BLOG SAYFASI
+
+Başlık: “Toplu SMS Hizmetleri Hakkında Bilgiler ve İpuçları”
+
+Blog Başlıkları:
+
+Toplu SMS Hizmetleri Neden Modern Pazarlamanın Vazgeçilmezi?
+
+SMS Teslimat Oranlarını Artırmanın 5 Etkili Yolu
+
+256 Bit Şifreleme ile Mesajlarınız Nasıl Korunur?
+
+Türkiye’de Doğru Toplu SMS Sağlayıcısı Nasıl Seçilir?
+
+Otomatik Toplu SMS ile İşletme İletişiminizi Güçlendirin
+
+📞 İLETİŞİM SAYFASI
+
+Başlık: “Gittibilsms ile İletişime Geçin”
+Form Alanları: Ad, E-posta, Telefon, Mesaj, Gönder.
+İletişim bilgilerini açık gösterin ve Telegram bağlantısı ekleyin.
+Opsiyonel Türkiye haritası arka planı.
+
+⚙️ SEO & TECH DETAILS
+
+Use H1–H3 headers properly in both languages.
+
+Add meta titles & descriptions for TR + EN:
+
+English:
+Title → Gittibilsms | Fast, Secure & Affordable Bulk SMS Services
+Description → Send fast, secure, and affordable Bulk SMS with Gittibilsms. Trusted SMS gateway with 256-bit encryption and 24/7 support.
+
+Turkish:
+Title → Gittibilsms | Hızlı, Güvenli ve Uygun Fiyatlı Toplu SMS Hizmetleri
+Description → Gittibilsms ile hızlı, güvenli ve ekonomik toplu SMS gönderimi. 256 bit şifreleme ve 7/24 destek garantisi.
