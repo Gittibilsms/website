@@ -11,6 +11,7 @@ import About from "@/pages/About";
 import Blog from "@/pages/Blog";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
+import BlogDetail from "@/pages/BlogDetail";
 
 function Router() {
   return (
@@ -18,6 +19,10 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/blog" component={Blog} />
+      {/* dynamic blog details */}
+      <Route path="/blog/:slug">
+        {(params: { slug: string }) => <BlogDetail slug={params.slug} />}
+      </Route>
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>

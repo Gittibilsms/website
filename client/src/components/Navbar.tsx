@@ -24,7 +24,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           <Link href="/" data-testid="link-home">
             <div className="text-2xl font-bold font-heading bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
-              Gittibilsms
+           <img
+  src="/Gittibil_Logo_dark1.png"
+  style={{ minWidth: "200px", width: "200px" }}
+/>
+
             </div>
           </Link>
 
@@ -43,30 +47,43 @@ export default function Navbar() {
               </Link>
             ))}
             
-            <div className="flex items-center gap-1 bg-muted p-1 rounded-lg">
-              <button
-                data-testid="button-lang-en"
-                onClick={() => setLanguage('en')}
-                className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
-                  language === 'en'
-                    ? 'bg-background text-foreground shadow-sm'
-                    : 'text-muted-foreground hover-elevate'
-                }`}
-              >
-                EN
-              </button>
-              <button
-                data-testid="button-lang-tr"
-                onClick={() => setLanguage('tr')}
-                className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
-                  language === 'tr'
-                    ? 'bg-background text-foreground shadow-sm'
-                    : 'text-muted-foreground hover-elevate'
-                }`}
-              >
-                TR
-              </button>
-            </div>
+           <div className="flex items-center gap-1 bg-muted p-1 rounded-lg">
+  <button
+    data-testid="button-lang-en"
+    onClick={() => setLanguage('en')}
+    className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
+      language === 'en'
+        ? 'bg-background text-foreground shadow-sm'
+        : 'text-muted-foreground hover-elevate'
+    }`}
+  >
+    EN
+  </button>
+
+  <button
+    data-testid="button-lang-tr"
+    onClick={() => setLanguage('tr')}
+    className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
+      language === 'tr'
+        ? 'bg-background text-foreground shadow-sm'
+        : 'text-muted-foreground hover-elevate'
+    }`}
+  >
+    TR
+  </button>
+</div>
+
+<button
+  data-testid="button-portal"
+  onClick={() => window.open('https://gittibilsms.com/', '_blank')}
+  className="px-3 py-1.5 text-sm font-medium rounded-md transition-colors bg-gradient-to-br from-green-500 to-blue-500 text-white hover:opacity-90 shadow-sm"
+>
+  Portal
+</button>
+
+
+
+
           </div>
 
           <button
