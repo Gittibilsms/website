@@ -31,7 +31,7 @@ type ApiBlogPost = {
 
 
 //const API_URL = "https://localhost:7161/front/GetBlogs";
-const API_URL = "https://blog.gittibilsms.com/front/GetBlogs"
+const API_URL = "https://blog.gittibilsms.com/front/GetBlogs";
 
 
 const getFirstImageSrc = (html: string): string | null => {
