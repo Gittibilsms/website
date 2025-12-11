@@ -20,7 +20,8 @@ type ApiBlogPost = {
   publishedDate?: string | null;
 };
 
-const API_URL = "https://localhost:7161/front/GetBlogs";
+//const API_URL = "https://localhost:7161/front/GetBlogs";
+const API_URL = "https://blog.gittibilsms.com/front/GetBlogs";
 
 type BlogDetailProps = {
   slug: string;
