@@ -1,6 +1,8 @@
 // src/pages/BlogDetail.tsx
 import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
+import { Link } from "wouter";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 type ApiBlogPost = {
   blogId: number;
@@ -8,7 +10,6 @@ type ApiBlogPost = {
   slug: string;
   excerpt: string | null;
   content: string;
-  // featureImageUrl removed
   category: string | null;
   tags: string | null;
   isActive: boolean;
@@ -20,7 +21,6 @@ type ApiBlogPost = {
   publishedDate?: string | null;
 };
 
-//const API_URL = "https://localhost:7161/front/GetBlogs";
 const API_URL = "https://blog.gittibilsms.com/front/GetBlogs";
 
 type BlogDetailProps = {
@@ -31,8 +31,7 @@ const getReadingTimeMinutes = (html: string): number => {
   const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
   if (!text) return 1;
   const words = text.split(" ").length;
-  const wordsPerMinute = 200;
-  return Math.max(1, Math.ceil(words / wordsPerMinute));
+  return Math.max(1, Math.ceil(words / 200));
 };
 
 const formatDate = (value?: string | null): string | null => {
@@ -47,6 +46,7 @@ const formatDate = (value?: string | null): string | null => {
 };
 
 const BlogDetail: React.FC<BlogDetailProps> = ({ slug }) => {
+  const { t } = useLanguage();
   const [post, setPost] = useState<ApiBlogPost | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -59,26 +59,23 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ slug }) => {
 
         const res = await fetch(API_URL);
         const text = await res.text();
-        console.log("Blog detail raw response:", text);
 
         if (!res.ok) {
           throw new Error(`HTTP ${res.status}`);
         }
 
         const data: ApiBlogPost[] = JSON.parse(text);
-
         const visiblePosts = data.filter(
           (p) => p.isActive && p.isPublished
         );
 
         const found = visiblePosts.find((p) => p.slug === slug);
         if (!found) {
-          setError("Post not found");
+          setError(t({ en: "Post not found", tr: "Blog bulunamadı" }));
         } else {
           setPost(found);
         }
       } catch (err: any) {
-        console.error("Error fetching blog detail:", err);
         setError(err.message ?? "Unexpected error");
       } finally {
         setLoading(false);
@@ -86,12 +83,14 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ slug }) => {
     };
 
     fetchPost();
-  }, [slug]);
+  }, [slug, t]);
 
   if (loading) {
     return (
       <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-muted-foreground">Loading blog...</p>
+        <p className="text-center text-muted-foreground">
+          {t({ en: "Loading blog...", tr: "Blog yükleniyor..." })}
+        </p>
       </div>
     );
   }
@@ -100,7 +99,7 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ slug }) => {
     return (
       <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
         <p className="text-center text-red-500">
-          {error ?? "Blog post not found."}
+          {error ?? t({ en: "Blog post not found.", tr: "Blog bulunamadı." })}
         </p>
       </div>
     );
@@ -109,31 +108,43 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ slug }) => {
   const minutesToRead = getReadingTimeMinutes(post.content);
   const published = formatDate(post.publishedDate ?? post.createdDate);
   const tags = post.tags
-    ? post.tags
-        .split(",")
-        .map((t) => t.trim())
-        .filter(Boolean)
+    ? post.tags.split(",").map((t) => t.trim()).filter(Boolean)
     : [];
 
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
-        <Card className="p-6 md:p-8">
-          <h1 className="text-3xl font-bold mb-3">{post.title}</h1>
+        <Card className="p-6 md:p-8 relative">
+          {/* Back to Blog (Language aware) */}
+          <Link
+            href="/blog"
+            className="absolute top-4 right-4 text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            ← {t({ en: "Back to Blog", tr: "Blog’a Dön" })}
+          </Link>
 
-          {/* Meta: author, date, reading time */}
+          <h1 className="text-3xl font-bold mb-3 mt-6">
+            {post.title}
+          </h1>
+
+          {/* Meta */}
           <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground mb-6">
-            <span>By {post.createdBy}</span>
+            <span>
+              {t({ en: "By", tr: "Yazar" })} {post.createdBy}
+            </span>
+
             {published && (
               <>
                 <span>•</span>
                 <span>{published}</span>
               </>
             )}
-            <>
-              <span>•</span>
-              <span>{minutesToRead} min read</span>
-            </>
+
+            <span>•</span>
+            <span>
+              {minutesToRead}{" "}
+              {t({ en: "min read", tr: "dk okuma" })}
+            </span>
           </div>
 
           {/* Category + Tags */}

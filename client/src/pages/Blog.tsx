@@ -118,9 +118,17 @@ export default function Blog() {
                   </div>
 
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-3 line-clamp-2">
+                  <h3 className="text-xl font-semibold mb-3 line-clamp-2">
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline hover:text-primary transition-colors"
+                    >
                       {post.title}
-                    </h3>
+                    </Link>
+                  </h3>
+
                     <p className="text-muted-foreground mb-4 line-clamp-3 text-sm">
                       {excerpt}
                     </p>
