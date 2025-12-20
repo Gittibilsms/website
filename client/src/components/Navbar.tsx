@@ -85,6 +85,13 @@ export default function Navbar() {
 
 
           </div>
+        <button
+          data-testid="button-portal"
+          onClick={() => window.open('https://portal.gittibilsms.com/', '_blank')}
+          className="px-3 py-1.5 text-sm font-medium rounded-md transition-colors bg-gradient-to-br from-green-500 to-blue-500 text-white hover:opacity-90 shadow-sm"
+        >
+          Portal
+        </button>
 
           <button
             data-testid="button-mobile-menu"
