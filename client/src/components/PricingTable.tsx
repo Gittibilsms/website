@@ -1,32 +1,52 @@
+import { useEffect, useState } from "react";
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useLocation } from 'wouter';
 
+type ApiPricingPackage = {
+  name: string;
+  price: string;
+  unitPrice: string;
+  popular: boolean;
+};
+
+const API_URL = "https://blog.gittibilsms.com/front/Getpricing";
+
 export default function PricingTable() {
   const { t } = useLanguage();
   const [, setLocation] = useLocation();
 
-  const packages = [
-    {
-      name: '100K SMS',
-      price: '21,000₺',
-      unitPrice: '0.21 Krş',
-      popular: false
-    },
-    {
-      name: '500K SMS',
-      price: '100,000₺',
-      unitPrice: '0.10 Krş',
-      popular: true
-    },
-    {
-      name: '1M SMS',
-      price: '190,000₺',
-      unitPrice: '0.19 Krş',
-      popular: false
-    }
-  ];
+  const [packages, setPackages] = useState<ApiPricingPackage[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchPricing = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+
+        const res = await fetch(API_URL);
+        const text = await res.text();
+        console.log("Pricing API raw response:", text);
+
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`);
+        }
+
+        const data: ApiPricingPackage[] = JSON.parse(text);
+        setPackages(data);
+      } catch (err: any) {
+        console.error("Error fetching pricing:", err);
+        setError(err.message ?? "Unexpected error");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPricing();
+  }, []);
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
